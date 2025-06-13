@@ -1,0 +1,391 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\test\\webbanhang\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\views\\sanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\views\\sanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\views\\sanpham\\checkoutsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\views\\sanpham\\checkoutsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\views\\sanpham\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\views\\sanpham\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\models\\donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\models\\donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\models\\ctdonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\models\\ctdonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\models\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\models\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\models\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\models\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\models\\loaisp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\models\\loaisp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\models\\khuvuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\models\\khuvuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\controllers\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\controllers\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\models\\shoppingcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\models\\shoppingcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Views\\SanPham\\Index.cshtml",
+              "RelativeDocumentMoniker": "webbanhang\\Views\\SanPham\\Index.cshtml",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Views\\SanPham\\Index.cshtml",
+              "RelativeToolTip": "webbanhang\\Views\\SanPham\\Index.cshtml",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwB4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T13:36:55.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "webbanhang\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "webbanhang\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAACYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T14:14:57.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "webbanhang\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "webbanhang\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAUwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T14:45:03.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "webbanhang\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "webbanhang\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAAF8AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T14:33:01.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SanPhamController.cs",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Controllers\\SanPhamController.cs",
+              "RelativeDocumentMoniker": "webbanhang\\Controllers\\SanPhamController.cs",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Controllers\\SanPhamController.cs",
+              "RelativeToolTip": "webbanhang\\Controllers\\SanPhamController.cs",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAQwJYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:32:59.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\appsettings.json",
+              "RelativeDocumentMoniker": "webbanhang\\appsettings.json",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\appsettings.json",
+              "RelativeToolTip": "webbanhang\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-12T13:31:05.379Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Cart.cshtml",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Views\\SanPham\\Cart.cshtml",
+              "RelativeDocumentMoniker": "webbanhang\\Views\\SanPham\\Cart.cshtml",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Views\\SanPham\\Cart.cshtml",
+              "RelativeToolTip": "webbanhang\\Views\\SanPham\\Cart.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAQwC0AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T15:41:32.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DonHang.cs",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Models\\DonHang.cs",
+              "RelativeDocumentMoniker": "webbanhang\\Models\\DonHang.cs",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Models\\DonHang.cs",
+              "RelativeToolTip": "webbanhang\\Models\\DonHang.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T16:31:31.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CheckoutSuccess.cshtml",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Views\\SanPham\\CheckoutSuccess.cshtml",
+              "RelativeDocumentMoniker": "webbanhang\\Views\\SanPham\\CheckoutSuccess.cshtml",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Views\\SanPham\\CheckoutSuccess.cshtml",
+              "RelativeToolTip": "webbanhang\\Views\\SanPham\\CheckoutSuccess.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T16:45:04.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CTDonHang.cs",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Models\\CTDonHang.cs",
+              "RelativeDocumentMoniker": "webbanhang\\Models\\CTDonHang.cs",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Models\\CTDonHang.cs",
+              "RelativeToolTip": "webbanhang\\Models\\CTDonHang.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T14:48:20.12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Program.cs",
+              "RelativeDocumentMoniker": "webbanhang\\Program.cs",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Program.cs",
+              "RelativeToolTip": "webbanhang\\Program.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAC4AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T15:04:46.928Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SanPham.cs",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Models\\SanPham.cs",
+              "RelativeDocumentMoniker": "webbanhang\\Models\\SanPham.cs",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Models\\SanPham.cs",
+              "RelativeToolTip": "webbanhang\\Models\\SanPham.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:12:05.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "webbanhang\\Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "webbanhang\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T14:40:30.543Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "webbanhang\\Views\\Account\\Register.cshtml",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "webbanhang\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T14:37:18.261Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TaiKhoan.cs",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Models\\TaiKhoan.cs",
+              "RelativeDocumentMoniker": "webbanhang\\Models\\TaiKhoan.cs",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Models\\TaiKhoan.cs",
+              "RelativeToolTip": "webbanhang\\Models\\TaiKhoan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T14:32:42.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Models\\ViewModels\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "webbanhang\\Models\\ViewModels\\RegisterViewModel.cs",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Models\\ViewModels\\RegisterViewModel.cs",
+              "RelativeToolTip": "webbanhang\\Models\\ViewModels\\RegisterViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T14:32:17.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LoaiSP.cs",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Models\\LoaiSP.cs",
+              "RelativeDocumentMoniker": "webbanhang\\Models\\LoaiSP.cs",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Models\\LoaiSP.cs",
+              "RelativeToolTip": "webbanhang\\Models\\LoaiSP.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:08:39.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "KhuVuc.cs",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Models\\KhuVuc.cs",
+              "RelativeDocumentMoniker": "webbanhang\\Models\\KhuVuc.cs",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Models\\KhuVuc.cs",
+              "RelativeToolTip": "webbanhang\\Models\\KhuVuc.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:07:57.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "webbanhang\\Models\\ErrorViewModel.cs",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "webbanhang\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:40:36.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "GioHangController.cs",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Controllers\\GioHangController.cs",
+              "RelativeDocumentMoniker": "webbanhang\\Controllers\\GioHangController.cs",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Controllers\\GioHangController.cs",
+              "RelativeToolTip": "webbanhang\\Controllers\\GioHangController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFkAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:35:02.042Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ShoppingCart.cs",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Models\\ShoppingCart.cs",
+              "RelativeDocumentMoniker": "webbanhang\\Models\\ShoppingCart.cs",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Models\\ShoppingCart.cs",
+              "RelativeToolTip": "webbanhang\\Models\\ShoppingCart.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:14:39.414Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Models\\CartItem.cs",
+              "RelativeDocumentMoniker": "webbanhang\\Models\\CartItem.cs",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Models\\CartItem.cs",
+              "RelativeToolTip": "webbanhang\\Models\\CartItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:14:26.484Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 63,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

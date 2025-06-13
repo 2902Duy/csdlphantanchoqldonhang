@@ -1,0 +1,38 @@
+﻿@model DonHang
+
+@{
+    ViewData["Title"] = "Thanh toán thành công";
+}
+
+<h2 class="text-success">🎉 Thanh toán thành công!</h2>
+
+<p>Mã đơn hàng: <strong>@Model.MaDonHang</strong></p>
+<p>Ngày đặt: <strong>@Model.NgayDat.ToString("dd/MM/yyyy HH:mm")</strong></p>
+<p>Khách hàng: <strong>@Model.KhachHang?.HoTen</strong></p>
+<p>Trạng thái: <strong>@Model.TrangThai</strong></p>
+
+<hr />
+<h4>Chi tiết đơn hàng:</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Sản phẩm</th>
+            <th>Đơn giá</th>
+            <th>Số lượng</th>
+            <th>Thành tiền</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.CTDonHangs)
+        {
+            <tr>
+                <td>@item.SanPham.TenSP</td>
+                <td>@item.DonGia.ToString("N0") VNĐ</td>
+                <td>@item.SoLuong</td>
+                <td>@((item.DonGia* item.SoLuong).ToString("N0")) VNĐ</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Index" asp-controller="Home" class="btn btn-primary">Quay lại trang chủ</a>

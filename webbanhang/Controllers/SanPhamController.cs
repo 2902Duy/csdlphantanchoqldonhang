@@ -1,0 +1,206 @@
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
+using System.Text.Json;
+using webbanhang.Data;
+using webbanhang.Models;
+
+namespace webbanhang.Controllers
+{
+    public class SanPhamController : Controller
+    {
+        private readonly ApplicationDbContext _context;
+
+        public SanPhamController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<IActionResult> Index(string searchString)
+        {
+            var query = _context.SanPham.Include(sp => sp.LoaiSP).AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                query = query.Where(sp => sp.TenSP.Contains(searchString));
+            }
+
+            var sanPhams = await query.ToListAsync();
+            return View(sanPhams);
+        }
+
+        [HttpGet]
+        public IActionResult AddToCart(string maSP)
+        {
+            if (!User.Identity.IsAuthenticated)
+                return RedirectToAction("Login", "Account");
+
+            var userName = User.Identity.Name;
+            var cartKey = $"cart_{userName}";
+            var cartJson = HttpContext.Session.GetString(cartKey);
+
+            var cart = string.IsNullOrEmpty(cartJson)
+                ? new Dictionary<string, int>()
+                : JsonSerializer.Deserialize<Dictionary<string, int>>(cartJson);
+
+            if (cart.ContainsKey(maSP))
+                cart[maSP]++;
+            else
+                cart[maSP] = 1;
+
+            HttpContext.Session.SetString(cartKey, JsonSerializer.Serialize(cart));
+
+            return RedirectToAction("Index");
+        }
+
+
+        [Authorize]
+        public IActionResult Cart()
+        {
+            if (!User.Identity.IsAuthenticated)
+                return RedirectToAction("Login", "Account");
+
+            var userName = User.Identity.Name;
+            var cartKey = $"cart_{userName}";
+            var cartJson = HttpContext.Session.GetString(cartKey);
+
+            var cart = string.IsNullOrEmpty(cartJson)
+                ? new Dictionary<string, int>()
+                : JsonSerializer.Deserialize<Dictionary<string, int>>(cartJson);
+
+            var maSPList = cart.Keys.ToList();
+
+            var products = _context.SanPham.Where(p => maSPList.Contains(p.MaSP)).ToList();
+
+            // Truyền thêm số lượng vào ViewModel hoặc ViewBag
+            ViewBag.CartQuantities = cart;
+
+            return View(products);
+        }
+
+
+        public IActionResult RemoveFromCart(string maSP)
+        {
+            if (!User.Identity.IsAuthenticated)
+                return RedirectToAction("Login", "Account");
+
+            var userName = User.Identity.Name;
+            var cartKey = $"cart_{userName}";
+            var cartJson = HttpContext.Session.GetString(cartKey);
+
+            var cart = string.IsNullOrEmpty(cartJson)
+                ? new Dictionary<string, int>()
+                : JsonSerializer.Deserialize<Dictionary<string, int>>(cartJson);
+
+            if (cart.ContainsKey(maSP))
+            {
+                cart.Remove(maSP);
+                HttpContext.Session.SetString(cartKey, JsonSerializer.Serialize(cart));
+            }
+
+            return RedirectToAction("Cart");
+        }
+
+
+        [HttpPost]
+        public IActionResult UpdateQuantityAjax(string maSP, int quantity)
+        {
+            var userName = User.Identity?.Name;
+            if (string.IsNullOrEmpty(userName))
+                return Json(new { success = false, message = "Chưa đăng nhập" });
+
+            var cartKey = $"cart_{userName}";
+            var cartJson = HttpContext.Session.GetString(cartKey);
+            var cart = string.IsNullOrEmpty(cartJson)
+                ? new Dictionary<string, int>()
+                : JsonSerializer.Deserialize<Dictionary<string, int>>(cartJson);
+
+            if (cart.ContainsKey(maSP))
+                cart[maSP] = quantity;
+
+            HttpContext.Session.SetString(cartKey, JsonSerializer.Serialize(cart));
+            return Json(new { success = true });
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Checkout(List<string> selectedItems)
+        {
+            if (!User.Identity.IsAuthenticated)
+                return RedirectToAction("Login", "Account");
+
+            var userName = User.Identity.Name;
+
+            // Lấy mã khách hàng từ User (tùy hệ thống bạn map username -> MaKH như nào)
+            var khachHang = _context.KhachHang.FirstOrDefault(kh => kh.TaiKhoan.TenTaiKhoan == userName);
+            if (khachHang == null)
+                return Unauthorized();
+
+            var cartKey = $"cart_{userName}";
+            var cartJson = HttpContext.Session.GetString(cartKey);
+            if (string.IsNullOrEmpty(cartJson)) return RedirectToAction("Cart");
+
+            var cart = JsonSerializer.Deserialize<Dictionary<string, int>>(cartJson);
+            var products = _context.SanPham
+                .Where(p => selectedItems.Contains(p.MaSP))
+                .ToList();
+
+            var prefixDH = "DH"+khachHang.MaKhuVuc;
+
+            var lastOrder = _context.DonHang
+                .Where(dh => dh.MaDonHang.StartsWith(prefixDH))
+                .OrderByDescending(dh => dh.MaDonHang)
+                .Select(dh => dh.MaDonHang)
+                .FirstOrDefault();
+            int nextOrderNumber = 1;
+            if (!string.IsNullOrEmpty(lastOrder) && lastOrder.Length > 4)
+            {
+                if (int.TryParse(lastOrder.Substring(4), out int number))
+                {
+                    nextOrderNumber = number + 1;
+                }
+            }
+            string maDonHang = prefixDH + nextOrderNumber.ToString("D2");
+
+
+            var donHang = new DonHang
+            {
+                MaDonHang = maDonHang,
+                MaKH = khachHang.MaKH,
+                NgayDat = DateTime.Now,
+                TrangThai = "Chờ xác nhận",
+                CTDonHangs = new List<CTDonHang>()
+            };
+            
+
+            foreach (var sp in products)
+            {
+                if (!cart.ContainsKey(sp.MaSP)) continue;
+
+                int soLuong = cart[sp.MaSP];
+
+                donHang.CTDonHangs.Add(new CTDonHang
+                {
+                    MaDonHang = maDonHang,
+                    MaSP = sp.MaSP,
+                    SoLuong = soLuong,
+                    DonGia = sp.GiaBan
+                });
+
+                cart.Remove(sp.MaSP); 
+            }
+
+            _context.DonHang.Add(donHang);
+            _context.SaveChanges();
+
+            // Lưu lại cart đã xóa những món đã thanh toán
+            HttpContext.Session.SetString(cartKey, JsonSerializer.Serialize(cart));
+
+            TempData["Success"] = "Đặt hàng thành công!";
+            return View("CheckoutSuccess", donHang);
+        }
+
+    }
+
+}

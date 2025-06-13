@@ -1,0 +1,101 @@
+﻿@model List<SanPham>
+@{
+    var quantities = ViewBag.CartQuantities as Dictionary<string, int>;
+}
+
+@using Microsoft.AspNetCore.Antiforgery
+@inject IAntiforgery Xsrf
+
+<form asp-action="Checkout" method="post">
+    @Html.AntiForgeryToken()
+    <table class="table">
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="checkAll" /></th>
+                <th>Ảnh</th>
+                <th>Tên SP</th>
+                <th>Giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                var sl = quantities[item.MaSP];
+                var thanhTien = item.GiaBan * sl;
+
+                <tr>
+                    <td>
+                        <input type="checkbox" name="selectedItems" value="@item.MaSP" class="item-checkbox" data-price="@item.GiaBan" data-qty="@sl" />
+                    </td>
+                    <td>
+                        <img src="@item.HinhAnh" width="60" />
+                    </td>
+                    <td>@item.TenSP</td>
+                    <td>@item.GiaBan.ToString("N0") VNĐ</td>
+                    <td>
+                        <input type="number" id="qty_@item.MaSP" value="@sl" min="1" class="form-control-sm" style="width:60px;" />
+                        <button type="button" class="btn btn-sm btn-secondary" onclick="updateQuantity('@item.MaSP')">Cập nhật</button>
+                    </td>
+                    <td id="total_@item.MaSP">@thanhTien.ToString("N0") VNĐ</td>
+                    <td>
+                        <a asp-action="RemoveFromCart" asp-controller="SanPham" asp-route-maSP="@item.MaSP" class="btn btn-danger btn-sm">Xóa</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h5>Tổng tiền: <span id="grandTotal">0</span> VNĐ</h5>
+    <button type="submit" class="btn btn-primary">Thanh toán</button>
+</form>
+
+@section Scripts {
+    <script>
+        function updateQuantity(maSP) {
+            const quantity = document.getElementById("qty_" + maSP).value;
+
+            fetch('/SanPham/UpdateQuantityAjax', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
+                },
+                body: `maSP=${maSP}&quantity=${quantity}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert("Cập nhật thành công");
+                    location.reload(); 
+                } else {
+                    alert("Lỗi: " + data.message);
+                }
+            });
+        }
+
+        // Chọn tất cả checkbox
+        document.getElementById("checkAll").addEventListener("change", function () {
+            const checkboxes = document.querySelectorAll(".item-checkbox");
+            checkboxes.forEach(cb => cb.checked = this.checked);
+            updateTotal();
+        });
+
+        // Tính tổng tiền khi chọn checkbox
+        document.querySelectorAll(".item-checkbox").forEach(cb => {
+            cb.addEventListener("change", updateTotal);
+        });
+
+        function updateTotal() {
+            let total = 0;
+            document.querySelectorAll(".item-checkbox:checked").forEach(cb => {
+                const price = parseFloat(cb.getAttribute("data-price"));
+                const qty = parseInt(cb.getAttribute("data-qty"));
+                total += price * qty;
+            });
+            document.getElementById("grandTotal").textContent = total.toLocaleString('vi-VN');
+        }
+    </script>
+}

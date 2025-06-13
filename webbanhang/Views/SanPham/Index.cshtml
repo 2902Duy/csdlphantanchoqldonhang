@@ -1,0 +1,42 @@
+﻿@model IEnumerable<SanPham>
+
+@{
+    ViewData["Title"] = "Danh sách sản phẩm";
+}
+
+<h2 class="text-center my-4">🛒 Danh sách sản phẩm</h2>
+
+<form asp-action="Index" method="get" class="mb-4">
+    <div class="input-group">
+        <input type="text" name="searchString" class="form-control" placeholder="Tìm sản phẩm..." value="@Context.Request.Query["searchString"]" />
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="submit">Tìm</button>
+        </div>
+    </div>
+</form>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    @foreach (var item in Model)
+    {
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0 rounded-4">
+                <img src="@item.HinhAnh"
+                     class="card-img-top img-fluid"
+                     alt="@item.TenSP"
+                     style="height: 220px; object-fit: contain; background-color: #f8f8f8;">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                        <h5 class="card-title text-primary">@item.TenSP</h5>
+                        <p class="card-text text-muted">@item.Mota</p>
+                    </div>
+                    <div>
+                        <p class="card-text text-danger fs-5 fw-bold">@String.Format("{0:N0} VNĐ", item.GiaBan)</p>
+                        <a asp-action="AddToCart" asp-controller="SanPham" asp-route-maSP="@item.MaSP" class="btn btn-outline-success w-100 rounded-pill">
+                            <i class="bi bi-cart-plus"></i> Thêm vào giỏ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
