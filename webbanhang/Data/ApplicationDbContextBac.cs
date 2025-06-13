@@ -4,9 +4,9 @@ using webbanhang.Models;
 
 namespace webbanhang.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContextBac : DbContext, IAppDbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public ApplicationDbContextBac(DbContextOptions<ApplicationDbContextBac> options)
             : base(options) { }
 
         public DbSet<SanPham> SanPham { get; set; }
@@ -18,14 +18,12 @@ namespace webbanhang.Data
         public DbSet<Kho> Kho { get; set; }
         public DbSet<KhuVuc> KhuVuc { get; set; }
 
-        public DbSet<TinhTP> tinhTP { get; set; }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<SanPham>()
-            .HasOne(sp => sp.LoaiSP)
-            .WithMany(ls => ls.SanPhams)
-            .HasForeignKey(sp => sp.MaLoaiSP);
+    .HasOne(sp => sp.LoaiSP)
+    .WithMany(ls => ls.SanPhams)
+    .HasForeignKey(sp => sp.MaLoaiSP);
 
             modelBuilder.Entity<SanPham>()
                 .HasOne(sp => sp.Kho)

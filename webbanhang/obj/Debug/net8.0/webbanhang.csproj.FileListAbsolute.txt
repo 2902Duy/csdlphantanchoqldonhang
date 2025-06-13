@@ -141,3 +141,4 @@ D:\test\webbanhang\webbanhang\obj\Debug\net8.0\refint\webbanhang.dll
 D:\test\webbanhang\webbanhang\obj\Debug\net8.0\webbanhang.pdb
 D:\test\webbanhang\webbanhang\obj\Debug\net8.0\webbanhang.genruntimeconfig.cache
 D:\test\webbanhang\webbanhang\obj\Debug\net8.0\ref\webbanhang.dll
+D:\test\webbanhang\webbanhang\obj\Debug\net8.0\webbanhang.sourcelink.json

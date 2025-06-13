@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("webbanhang")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+734dc4b1c3bae0b8963d0b7c9a508cbb53998cf1")]
 [assembly: System.Reflection.AssemblyProductAttribute("webbanhang")]
 [assembly: System.Reflection.AssemblyTitleAttribute("webbanhang")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

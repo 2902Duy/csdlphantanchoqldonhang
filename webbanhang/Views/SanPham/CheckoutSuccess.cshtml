@@ -4,35 +4,54 @@
     ViewData["Title"] = "Thanh toán thành công";
 }
 
-<h2 class="text-success">🎉 Thanh toán thành công!</h2>
+<div class="text-center my-5">
+    <i class="bi bi-check-circle-fill text-success" style="font-size: 4rem;"></i>
+    <h2 class="text-success mt-3">Thanh toán thành công!</h2>
+    <p class="lead text-muted">Cảm ơn bạn đã mua sắm tại <strong>WebBánHàng</strong>.</p>
+</div>
 
-<p>Mã đơn hàng: <strong>@Model.MaDonHang</strong></p>
-<p>Ngày đặt: <strong>@Model.NgayDat.ToString("dd/MM/yyyy HH:mm")</strong></p>
-<p>Khách hàng: <strong>@Model.KhachHang?.HoTen</strong></p>
-<p>Trạng thái: <strong>@Model.TrangThai</strong></p>
+<div class="card shadow-sm mb-4">
+    <div class="card-body">
+        <h5 class="card-title text-primary">Thông tin đơn hàng</h5>
+        <p><strong>Mã đơn hàng:</strong> @Model.MaDonHang</p>
+        <p><strong>Ngày đặt:</strong> @Model.NgayDat.ToString("dd/MM/yyyy HH:mm")</p>
+        <p><strong>Khách hàng:</strong> @Model.KhachHang?.HoTen</p>
+        <p><strong>Địa chỉ giao hàng:</strong> @Model.KhachHang?.DiaChi</p>
+        <p><strong>Trạng thái:</strong> <span class="badge bg-success">@Model.TrangThai</span></p>
+    </div>
+</div>
 
-<hr />
-<h4>Chi tiết đơn hàng:</h4>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Sản phẩm</th>
-            <th>Đơn giá</th>
-            <th>Số lượng</th>
-            <th>Thành tiền</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.CTDonHangs)
-        {
-            <tr>
-                <td>@item.SanPham.TenSP</td>
-                <td>@item.DonGia.ToString("N0") VNĐ</td>
-                <td>@item.SoLuong</td>
-                <td>@((item.DonGia* item.SoLuong).ToString("N0")) VNĐ</td>
-            </tr>
-        }
-    </tbody>
-</table>
+<div class="card shadow-sm">
+    <div class="card-body">
+        <h5 class="card-title text-primary">Chi tiết đơn hàng</h5>
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered align-middle">
+                <thead class="table-light">
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th class="text-end">Đơn giá</th>
+                        <th class="text-center">Số lượng</th>
+                        <th class="text-end">Thành tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.CTDonHangs)
+                    {
+                        <tr>
+                            <td>@item.SanPham.TenSP</td>
+                            <td class="text-end">@item.DonGia.ToString("N0") VNĐ</td>
+                            <td class="text-center">@item.SoLuong</td>
+                            <td class="text-end">@((item.DonGia * item.SoLuong).ToString("N0")) VNĐ</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
-<a asp-action="Index" asp-controller="Home" class="btn btn-primary">Quay lại trang chủ</a>
+<div class="text-center mt-4">
+    <a asp-action="Index" asp-controller="Home" class="btn btn-primary btn-lg">
+        <i class="bi bi-house-door-fill"></i> Quay lại trang chủ
+    </a>
+</div>

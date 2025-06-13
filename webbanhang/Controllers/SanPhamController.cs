@@ -11,10 +11,14 @@ namespace webbanhang.Controllers
     public class SanPhamController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly ApplicationDbContextNam _contextNam;
+        private readonly ApplicationDbContextBac _contextBac;
 
-        public SanPhamController(ApplicationDbContext context)
+        public SanPhamController(ApplicationDbContext context, ApplicationDbContextNam contextNam, ApplicationDbContextBac contextBac)
         {
             _context = context;
+            _contextNam = contextNam;
+            _contextBac = contextBac;
         }
 
         public async Task<IActionResult> Index(string searchString)
@@ -132,8 +136,19 @@ namespace webbanhang.Controllers
 
             var userName = User.Identity.Name;
 
-            // Lấy mã khách hàng từ User (tùy hệ thống bạn map username -> MaKH như nào)
-            var khachHang = _context.KhachHang.FirstOrDefault(kh => kh.TaiKhoan.TenTaiKhoan == userName);
+            // Lấy mã KH từ claims (nếu bạn có lưu claim "MaKH")
+            var maKH = User.FindFirst("MaKH")?.Value;
+            var maKhuVuc = User.FindFirst("MaKhuVuc")?.Value;
+
+            if (string.IsNullOrEmpty(maKH) || string.IsNullOrEmpty(maKhuVuc))
+                return Unauthorized();
+
+            IAppDbContext db = maKhuVuc == "MB" ? (IAppDbContext)_contextBac : _contextNam;
+
+            var khachHang = db.KhachHang
+                .Include(k => k.TaiKhoan)
+                .FirstOrDefault(kh => kh.MaKH == maKH);
+
             if (khachHang == null)
                 return Unauthorized();
 
@@ -142,17 +157,17 @@ namespace webbanhang.Controllers
             if (string.IsNullOrEmpty(cartJson)) return RedirectToAction("Cart");
 
             var cart = JsonSerializer.Deserialize<Dictionary<string, int>>(cartJson);
-            var products = _context.SanPham
+            var products = db.SanPham
                 .Where(p => selectedItems.Contains(p.MaSP))
                 .ToList();
 
-            var prefixDH = "DH"+khachHang.MaKhuVuc;
-
-            var lastOrder = _context.DonHang
+            var prefixDH = "DH" + khachHang.MaKhuVuc;
+            var lastOrder = db.DonHang
                 .Where(dh => dh.MaDonHang.StartsWith(prefixDH))
                 .OrderByDescending(dh => dh.MaDonHang)
                 .Select(dh => dh.MaDonHang)
                 .FirstOrDefault();
+
             int nextOrderNumber = 1;
             if (!string.IsNullOrEmpty(lastOrder) && lastOrder.Length > 4)
             {
@@ -161,8 +176,8 @@ namespace webbanhang.Controllers
                     nextOrderNumber = number + 1;
                 }
             }
-            string maDonHang = prefixDH + nextOrderNumber.ToString("D2");
 
+            string maDonHang = prefixDH + nextOrderNumber.ToString("D2");
 
             var donHang = new DonHang
             {
@@ -172,7 +187,6 @@ namespace webbanhang.Controllers
                 TrangThai = "Chờ xác nhận",
                 CTDonHangs = new List<CTDonHang>()
             };
-            
 
             foreach (var sp in products)
             {
@@ -188,18 +202,18 @@ namespace webbanhang.Controllers
                     DonGia = sp.GiaBan
                 });
 
-                cart.Remove(sp.MaSP); 
+                cart.Remove(sp.MaSP);
             }
 
-            _context.DonHang.Add(donHang);
-            _context.SaveChanges();
+            db.DonHang.Add(donHang);
+            db.SaveChanges();
 
-            // Lưu lại cart đã xóa những món đã thanh toán
             HttpContext.Session.SetString(cartKey, JsonSerializer.Serialize(cart));
 
             TempData["Success"] = "Đặt hàng thành công!";
             return View("CheckoutSuccess", donHang);
         }
+
 
     }
 

@@ -1,8 +1,26 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Trang chủ";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container py-5">
+    <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+            <img src="~/images/storefront.jpg" alt="Giới thiệu web bán hàng" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
+            <h1 class="display-5 fw-bold mb-3 text-primary">Chào mừng đến với Web Bán Hàng</h1>
+            <p class="lead">
+                Đây là nền tảng mua sắm trực tuyến hiện đại, giúp bạn lựa chọn những sản phẩm chất lượng,
+                giá cả hợp lý và giao hàng tận nơi nhanh chóng.
+            </p>
+            <ul class="list-unstyled">
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Giao diện thân thiện, dễ sử dụng</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Hỗ trợ khách hàng 24/7</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Sản phẩm đa dạng theo từng khu vực</li>
+            </ul>
+            <a href="@Url.Action("Index", "SanPham")" class="btn btn-primary btn-lg mt-4">
+                Khám phá sản phẩm <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+        </div>
+    </div>
 </div>

@@ -7,22 +7,48 @@ using System.Security.Claims;
 using webbanhang.Data;
 using webbanhang.Models;
 using webbanhang.Models.ViewModels;
-
+using Microsoft.AspNetCore.Identity;
 namespace webbanhang.Controllers
 {
     public class AccountController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly ApplicationDbContextNam _contextNam;
+        private readonly ApplicationDbContextBac _contextBac;
 
-        public AccountController(ApplicationDbContext context)
+        public AccountController(ApplicationDbContext context, ApplicationDbContextNam contextNam, ApplicationDbContextBac contextBac)
         {
             _context = context;
+            _contextNam = contextNam;
+            _contextBac = contextBac;
         }
+
+        private string GenerateNextCode<T>(DbSet<T> dbSet, string columnName, string prefix) where T : class
+        {
+            var lastCode = dbSet
+                .AsQueryable()
+                .Where(e => EF.Property<string>(e, columnName).StartsWith(prefix))
+                .OrderByDescending(e => EF.Property<string>(e, columnName))
+                .Select(e => EF.Property<string>(e, columnName))
+                .FirstOrDefault();
+
+            int nextNumber = 1;
+            if (!string.IsNullOrEmpty(lastCode) && lastCode.Length > prefix.Length)
+            {
+                if (int.TryParse(lastCode.Substring(prefix.Length), out int number))
+                {
+                    nextNumber = number + 1;
+                }
+            }
+
+            return prefix + nextNumber.ToString("D2");
+        }
+
 
         [HttpGet]
         public IActionResult Register()
         {
-            ViewBag.KhuVuc = new SelectList(_context.KhuVuc.ToList(), "MaKhuVuc", "TenKhuVuc");
+            ViewBag.KhuVuc = new SelectList(_context.tinhTP.ToList(), "MaKhuVuc", "TenTinhTP");
             return View();
         }
 
@@ -31,23 +57,23 @@ namespace webbanhang.Controllers
         {
             if (ModelState.IsValid)
             {
-                string prefixKH = "KH"+model.MaKhuVuc;
-                var lastKh = _context.KhachHang
-                    .Where(k => k.MaKH.StartsWith(prefixKH))
-                    .OrderByDescending(k => k.MaKH)
-                    .Select(k => k.MaKH)
-                    .FirstOrDefault();
 
-                int nextNumber = 1;
-                
-                if (!string.IsNullOrEmpty(lastKh) && lastKh.Length > 4)
+                var existingAccount = _contextBac.TaiKhoan
+                            .FirstOrDefault(t => t.TenTaiKhoan == model.TenTaiKhoan)
+                         ?? _contextNam.TaiKhoan
+                            .FirstOrDefault(t => t.TenTaiKhoan == model.TenTaiKhoan);
+
+                if (existingAccount != null)
                 {
-                    if (int.TryParse(lastKh.Substring(4), out int number))
-                    {
-                        nextNumber = number + 1;
-                    }
+                    ModelState.AddModelError("TenTaiKhoan", "Tên tài khoản đã tồn tại.");
+
+                    ViewBag.KhuVuc = new SelectList(_context.tinhTP.ToList(), "MaKhuVuc", "TenTinhTP");
+                    return View(model);
                 }
-                string newMaKH = prefixKH + nextNumber.ToString("D2");
+                string prefixKH = "KH"+model.MaKhuVuc;
+                
+                var dbkh = model.MaKhuVuc=="MB" ? _contextBac.KhachHang : _contextNam.KhachHang;
+                string newMaKH = GenerateNextCode(dbkh, "MaKH", prefixKH);
 
                 var kh = new KhachHang
                 {
@@ -58,53 +84,42 @@ namespace webbanhang.Controllers
                     Email = model.Email,
                     MaKhuVuc = model.MaKhuVuc
                 };
-                string prefixTK = "TK"+model.MaKhuVuc;
+                string prefixTK = "TK" + model.MaKhuVuc;
+                var dbtk = model.MaKhuVuc == "MB" ? _contextBac.TaiKhoan : _contextNam.TaiKhoan;
+                string newMaTK = GenerateNextCode(dbtk, "MaTK", prefixTK);
 
-                var lastTK = _context.TaiKhoan
-                    .Where(t => t.MaTK.StartsWith(prefixTK))
-                    .OrderByDescending(t => t.MaTK)
-                    .Select(t => t.MaTK)
-                    .FirstOrDefault();
-
-                int nextTK = 1;
-                //string prefixTK = lastTK.Substring(0,4);
-                if (!string.IsNullOrEmpty(lastTK) && lastTK.Length > 4)
-                {
-                    if (int.TryParse(lastTK.Substring(4), out int number))
-                    {
-                        nextTK = number + 1;
-                    }
-                }
-                //string newMaTK;
-                //while (true)
-                //{
-                //    newMaTK = prefixTK + nextNumber.ToString("D2");
-
-                //    bool exists = _context.TaiKhoan.Any(tk => tk.MaTK == newMaKH);
-                //    if (!exists) break;
-
-                //    nextNumber++;
-                //}
-                string newMaTK = prefixTK + nextTK.ToString("D2");
+                var hasher = new PasswordHasher<TaiKhoan>();
+                string hashedPassword = hasher.HashPassword(null, model.MatKhau);
 
                 var tk = new TaiKhoan
                 {
                     MaTK = newMaTK,
                     TenTaiKhoan = model.TenTaiKhoan,
-                    MatKhau = model.MatKhau, 
+                    MatKhau = hashedPassword, 
                     MaKH = newMaKH   
                 };
-
-                _context.KhachHang.Add(kh);
-                _context.TaiKhoan.Add(tk);
-                await _context.SaveChangesAsync();
+                if(model.MaKhuVuc=="MB")
+                {
+                    _contextBac.KhachHang.Add(kh);
+                    _contextBac.TaiKhoan.Add(tk);
+                    await _contextBac.SaveChangesAsync();
+                }
+                else
+                {
+                    _contextNam.KhachHang.Add(kh);
+                    _contextNam.TaiKhoan.Add(tk);
+                    await _contextNam.SaveChangesAsync();
+                }
+                
+                    
+                
 
                 var khuVuc = await _context.KhuVuc.FindAsync(model.MaKhuVuc);
 
                 return RedirectToAction("Login");
             }
 
-            ViewBag.KhuVuc = new SelectList(_context.KhuVuc.ToList(), "MaKhuVuc", "TenKhuVuc");
+            ViewBag.KhuVuc = new SelectList(_context.tinhTP.ToList(), "MaKhuVuc", "TenTinhTP");
             return View(model);
         }
 
@@ -117,26 +132,47 @@ namespace webbanhang.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(string tenTaiKhoan, string matKhau)
         {
-            var tk = _context.TaiKhoan.Include(t => t.KhachHang)
-                     .FirstOrDefault(t => t.TenTaiKhoan == tenTaiKhoan && t.MatKhau == matKhau);
+            TaiKhoan tk = null;
+            tk = _contextBac.TaiKhoan
+                    .Include(t => t.KhachHang)
+                    .FirstOrDefault(t => t.TenTaiKhoan == tenTaiKhoan);
+
+            if (tk == null)
+            {
+                tk = _contextNam.TaiKhoan
+                        .Include(t => t.KhachHang)
+                        .FirstOrDefault(t => t.TenTaiKhoan == tenTaiKhoan);
+
+            }
 
             if (tk != null)
             {
-                var claims = new List<Claim>
-        {
-            new Claim(ClaimTypes.Name, tk.TenTaiKhoan),
-            new Claim("HoTen", tk.KhachHang?.HoTen ?? "")
-        };
-                var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                var principal = new ClaimsPrincipal(identity);
+                var hasher = new PasswordHasher<TaiKhoan>();
+                var result = hasher.VerifyHashedPassword(null, tk.MatKhau, matKhau);
 
-                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
-                return RedirectToAction("Index", "Home");
+                if (result == PasswordVerificationResult.Success)
+                {
+                    var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, tk.TenTaiKhoan),
+                new Claim("HoTen", tk.KhachHang?.HoTen ?? ""),
+                new Claim("MaKH", tk.KhachHang?.MaKH ?? ""),
+                new Claim("MaKhuVuc", tk.KhachHang?.MaKhuVuc ?? ""),
+            };
+
+                    var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    var principal = new ClaimsPrincipal(identity);
+
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+                    return RedirectToAction("Index", "Home");
+                }
             }
 
             ViewBag.Error = "Sai tên đăng nhập hoặc mật khẩu.";
             return View();
         }
+
+
 
         public async Task<IActionResult> Logout()
         {
