@@ -3,28 +3,40 @@
   "WorkspaceRootPath": "D:\\test\\webbanhang\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\views\\sanpham\\checkoutsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\views\\sanpham\\checkoutsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\views\\sanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\views\\sanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\data\\applicationdbcontexttrung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\data\\applicationdbcontexttrung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\data\\iappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\data\\iappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\views\\sanpham\\checkoutsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\views\\sanpham\\checkoutsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|solutionrelative:webbanhang\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{16104500-2886-4512-9ED8-45211B691F75}|webbanhang\\webbanhang.csproj|d:\\test\\webbanhang\\webbanhang\\models\\tinhtp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,86 +50,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CheckoutSuccess.cshtml",
-              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Views\\SanPham\\CheckoutSuccess.cshtml",
-              "RelativeDocumentMoniker": "webbanhang\\Views\\SanPham\\CheckoutSuccess.cshtml",
-              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Views\\SanPham\\CheckoutSuccess.cshtml",
-              "RelativeToolTip": "webbanhang\\Views\\SanPham\\CheckoutSuccess.cshtml",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwCcAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-13T13:35:11.985Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Views\\SanPham\\Index.cshtml",
-              "RelativeDocumentMoniker": "webbanhang\\Views\\SanPham\\Index.cshtml",
-              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Views\\SanPham\\Index.cshtml",
-              "RelativeToolTip": "webbanhang\\Views\\SanPham\\Index.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-13T13:30:47.449Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "webbanhang\\Views\\Account\\Login.cshtml",
-              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "webbanhang\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-13T13:17:47.063Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "webbanhang\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "webbanhang\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAIwD0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T13:04:28.204Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "webbanhang\\Views\\Account\\Register.cshtml",
-              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "webbanhang\\Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAADAAAAAAAAAAAAAQwEMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-13T12:43:06.824Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TinhTP.cs",
-              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Models\\TinhTP.cs",
-              "RelativeDocumentMoniker": "webbanhang\\Models\\TinhTP.cs",
-              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Models\\TinhTP.cs",
-              "RelativeToolTip": "webbanhang\\Models\\TinhTP.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T13:03:48.008Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -128,16 +62,129 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\appsettings.json",
+              "RelativeDocumentMoniker": "webbanhang\\appsettings.json",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\appsettings.json",
+              "RelativeToolTip": "webbanhang\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-14T07:12:52.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IAppDbContext.cs",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Data\\IAppDbContext.cs",
+              "RelativeDocumentMoniker": "webbanhang\\Data\\IAppDbContext.cs",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Data\\IAppDbContext.cs",
+              "RelativeToolTip": "webbanhang\\Data\\IAppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T07:09:46.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Program.cs",
+              "RelativeDocumentMoniker": "webbanhang\\Program.cs",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Program.cs",
+              "RelativeToolTip": "webbanhang\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T07:06:02.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SanPhamController.cs",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Controllers\\SanPhamController.cs",
+              "RelativeDocumentMoniker": "webbanhang\\Controllers\\SanPhamController.cs",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Controllers\\SanPhamController.cs",
+              "RelativeToolTip": "webbanhang\\Controllers\\SanPhamController.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAowJUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T06:59:10.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationDbContextTrung.cs",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Data\\ApplicationDbContextTrung.cs",
+              "RelativeDocumentMoniker": "webbanhang\\Data\\ApplicationDbContextTrung.cs",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Data\\ApplicationDbContextTrung.cs",
+              "RelativeToolTip": "webbanhang\\Data\\ApplicationDbContextTrung.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T06:55:20.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
               "Title": "AccountController.cs",
               "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "webbanhang\\Controllers\\AccountController.cs",
               "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Controllers\\AccountController.cs",
               "RelativeToolTip": "webbanhang\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAAAHsAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-12T14:33:01.773Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CheckoutSuccess.cshtml",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Views\\SanPham\\CheckoutSuccess.cshtml",
+              "RelativeDocumentMoniker": "webbanhang\\Views\\SanPham\\CheckoutSuccess.cshtml",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Views\\SanPham\\CheckoutSuccess.cshtml",
+              "RelativeToolTip": "webbanhang\\Views\\SanPham\\CheckoutSuccess.cshtml",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-13T13:35:11.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "webbanhang\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "webbanhang\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAIwD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T13:04:28.204Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "webbanhang\\Views\\Account\\Register.cshtml",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "webbanhang\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAQwEMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-13T12:43:06.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TinhTP.cs",
+              "DocumentMoniker": "D:\\test\\webbanhang\\webbanhang\\Models\\TinhTP.cs",
+              "RelativeDocumentMoniker": "webbanhang\\Models\\TinhTP.cs",
+              "ToolTip": "D:\\test\\webbanhang\\webbanhang\\Models\\TinhTP.cs",
+              "RelativeToolTip": "webbanhang\\Models\\TinhTP.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T13:03:48.008Z"
             }
           ]
         },

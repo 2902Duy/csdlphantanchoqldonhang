@@ -15,12 +15,14 @@ namespace webbanhang.Controllers
         private readonly ApplicationDbContext _context;
         private readonly ApplicationDbContextNam _contextNam;
         private readonly ApplicationDbContextBac _contextBac;
+        private readonly ApplicationDbContextTrung _contextTrung;
 
-        public AccountController(ApplicationDbContext context, ApplicationDbContextNam contextNam, ApplicationDbContextBac contextBac)
+        public AccountController(ApplicationDbContext context, ApplicationDbContextNam contextNam, ApplicationDbContextBac contextBac, ApplicationDbContextTrung contextTrung)
         {
             _context = context;
             _contextNam = contextNam;
             _contextBac = contextBac;
+            _contextTrung = contextTrung;
         }
 
         private string GenerateNextCode<T>(DbSet<T> dbSet, string columnName, string prefix) where T : class
@@ -71,8 +73,10 @@ namespace webbanhang.Controllers
                     return View(model);
                 }
                 string prefixKH = "KH"+model.MaKhuVuc;
-                
-                var dbkh = model.MaKhuVuc=="MB" ? _contextBac.KhachHang : _contextNam.KhachHang;
+
+                var dbkh = model.MaKhuVuc == "MB" ? _contextBac.KhachHang
+                         : model.MaKhuVuc == "MT" ? _contextTrung.KhachHang
+                         : _contextNam.KhachHang;
                 string newMaKH = GenerateNextCode(dbkh, "MaKH", prefixKH);
 
                 var kh = new KhachHang
@@ -85,7 +89,9 @@ namespace webbanhang.Controllers
                     MaKhuVuc = model.MaKhuVuc
                 };
                 string prefixTK = "TK" + model.MaKhuVuc;
-                var dbtk = model.MaKhuVuc == "MB" ? _contextBac.TaiKhoan : _contextNam.TaiKhoan;
+                var dbtk = model.MaKhuVuc == "MB" ? _contextBac.TaiKhoan 
+                    : model.MaKhuVuc == "MT" ? _contextTrung.TaiKhoan
+                    : _contextNam.TaiKhoan;
                 string newMaTK = GenerateNextCode(dbtk, "MaTK", prefixTK);
 
                 var hasher = new PasswordHasher<TaiKhoan>();
@@ -103,6 +109,12 @@ namespace webbanhang.Controllers
                     _contextBac.KhachHang.Add(kh);
                     _contextBac.TaiKhoan.Add(tk);
                     await _contextBac.SaveChangesAsync();
+                }
+                else if(model.MaKhuVuc=="MT")
+                {
+                    _contextTrung.KhachHang.Add(kh);
+                    _contextTrung.TaiKhoan.Add(tk);
+                    await _contextTrung.SaveChangesAsync();
                 }
                 else
                 {
@@ -136,6 +148,12 @@ namespace webbanhang.Controllers
             tk = _contextBac.TaiKhoan
                     .Include(t => t.KhachHang)
                     .FirstOrDefault(t => t.TenTaiKhoan == tenTaiKhoan);
+
+            if (tk == null) {
+                tk = _contextTrung.TaiKhoan
+                        .Include(t => t.KhachHang)
+                        .FirstOrDefault(t => t.TenTaiKhoan == tenTaiKhoan);
+            }
 
             if (tk == null)
             {

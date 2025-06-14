@@ -13,12 +13,14 @@ namespace webbanhang.Controllers
         private readonly ApplicationDbContext _context;
         private readonly ApplicationDbContextNam _contextNam;
         private readonly ApplicationDbContextBac _contextBac;
+        private readonly ApplicationDbContextTrung _contextTrung;
 
-        public SanPhamController(ApplicationDbContext context, ApplicationDbContextNam contextNam, ApplicationDbContextBac contextBac)
+        public SanPhamController(ApplicationDbContext context, ApplicationDbContextNam contextNam, ApplicationDbContextBac contextBac, ApplicationDbContextTrung contextTrung)
         {
             _context = context;
             _contextNam = contextNam;
             _contextBac = contextBac;
+            _contextTrung = contextTrung;
         }
 
         public async Task<IActionResult> Index(string searchString)
@@ -143,7 +145,9 @@ namespace webbanhang.Controllers
             if (string.IsNullOrEmpty(maKH) || string.IsNullOrEmpty(maKhuVuc))
                 return Unauthorized();
 
-            IAppDbContext db = maKhuVuc == "MB" ? (IAppDbContext)_contextBac : _contextNam;
+            IAppDbContext db = maKhuVuc == "MB" ? (IAppDbContext)_contextBac 
+                :maKhuVuc == "MT" ? (IAppDbContext)_contextTrung
+                : _contextNam;
 
             var khachHang = db.KhachHang
                 .Include(k => k.TaiKhoan)

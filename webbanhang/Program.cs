@@ -26,6 +26,10 @@ builder.Services.AddDbContext<ApplicationDbContextNam>(options =>
 builder.Services.AddDbContext<ApplicationDbContextBac>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ServerBac")));
 
+builder.Services.AddDbContext<ApplicationDbContextTrung>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ServerTrung")));
+
+
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
